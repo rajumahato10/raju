@@ -1,0 +1,935 @@
+Chat history
+
+Open sidebar
+
+ChatGPT Auto
+
+You said:
+i want to make simple website projct how can i start in vs code
+ChatGPT said:
+ChatGPT
+To start a simple website project using VS Code, follow these steps:
+
+1. Install Visual Studio Code (VS Code)
+Download and install VS Code if you haven't already.
+2. Set Up Your Project Folder
+Create a folder for your project. For example, name it my-website.
+Open VS Code, then go to File > Open Folder and select the folder you just created.
+3. Create Basic HTML, CSS, and JavaScript Files
+In your project folder, create three files:
+index.html (HTML file)
+styles.css (CSS file)
+script.js (JavaScript file)
+Example:
+index.html
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple website project.</p>
+    <button id="clickButton">Click Me</button>
+    <script src="script.js"></script>
+</body>
+</html>
+styles.css
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+script.js
+
+javascript
+Copy code
+document.getElementById("clickButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+4. Install the Live Server Extension
+In VS Code, go to the Extensions tab (or press Ctrl+Shift+X), search for "Live Server," and install it.
+This extension allows you to run your website locally with live reload.
+5. Run Your Project
+Open your index.html file in VS Code.
+Right-click anywhere in the index.html file and select Open with Live Server.
+A new browser window will open, displaying your simple website.
+6. Make Edits and Preview
+As you make changes to the index.html, styles.css, or script.js files, the browser will automatically update (thanks to Live Server).
+7. Publish (Optional)
+Once you're happy with your website, you can upload the files to a web hosting service or use GitHub Pages for free hosting.
+By following these steps, you'll have a basic website with HTML, CSS, and JavaScript running on your local machine.
+
+
+
+
+
+
+You said:
+ok I have created folder give me path to make home page , differnent categories that can i put on it
+ChatGPT said:
+ChatGPT
+Great! Now that you have created your folder and basic setup, here's how you can structure your website by adding different categories and setting up your home page.
+
+Folder Structure
+You can organize your website files into different folders for better management. For example:
+
+perl
+Copy code
+my-website/
+│
+├── index.html          # Home page
+├── styles.css          # Global styles
+├── script.js           # Global scripts
+├── about.html          # About page
+├── contact.html        # Contact page
+├── products.html       # Products/Services page
+├── categories/         # Folder for category pages
+│   ├── category1.html
+│   ├── category2.html
+│   └── category3.html
+└── images/             # Folder for images
+Home Page (index.html)
+Your home page can act as the gateway to your different categories. Here's how you can structure it:
+
+index.html
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products/Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="categories/category1.html">Category 1</a></li>
+                <li><a href="categories/category2.html">Category 2</a></li>
+                <li><a href="categories/category3.html">Category 3</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+Category Pages
+Each category will have its own HTML file in the categories/ folder. Here's an example of a category page:
+
+categories/category1.html
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category 1 - My Website</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Category 1</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../products.html">Products/Services</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Category 1</h2>
+            <p>This is the description of Category 1. You can add more content here as needed.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+Other Pages
+You can also create additional pages like About, Contact, and Products/Services in the root directory. The structure will be similar to your category pages.
+
+about.html
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products/Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Who We Are</h2>
+            <p>This page talks about the mission, vision, and story of your website or company.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+Linking CSS and JS Files
+Make sure all your pages include links to the styles.css file and any necessary JavaScript in the <head> or <body> section:
+
+html
+Copy code
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+For pages inside the categories/ folder, you need to adjust the relative path for linking CSS and JS like this:
+
+html
+Copy code
+<link rel="stylesheet" href="../styles.css">
+<script src="../script.js"></script>
+Add Category-Specific Content
+Add more specific content or media to each category page as required, such as product listings, blog posts, etc.
+With this folder structure, you can easily scale your project by adding more categories and pages. Let me know if you need help with anything else!
+
+
+
+
+
+
+You said:
+code for page contact  us
+
+ChatGPT said:
+ChatGPT
+Here’s a simple example of a Contact Us page with an HTML form that allows users to submit their contact information. You can extend or modify this to suit your needs.
+
+contact.html
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products/Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>If you have any questions, feel free to contact us using the form below:</p>
+
+            <form action="submit_form.php" method="post" id="contactForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+Explanation:
+Form Elements:
+The form includes fields for the user's name, email, and a message.
+required attributes are used to ensure that all fields are filled before submission.
+The form uses the POST method for submitting the data.
+Note: The action submit_form.php assumes server-side processing using PHP. You can modify this to suit your back-end language or use a mail service.
+CSS Styling
+In your styles.css, you can style the form and elements like this:
+
+css
+Copy code
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+Backend (Optional)
+If you want to handle form submissions using PHP, here’s a simple submit_form.php:
+
+php
+Copy code
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+
+    // Example of how to handle data (e.g., send email)
+    $to = "your-email@example.com";
+    $subject = "Contact Form Submission from " . $name;
+    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Thank you, your message has been sent!";
+    } else {
+        echo "Sorry, there was a problem sending your message.";
+    }
+}
+?>
+Notes:
+Replace "your-email@example.com" with the actual email address you want the form submissions to go to.
+Ensure your server supports PHP for this to work.
+Alternatively, you can use third-party services like Formspree or Google Forms if you don't want to handle the backend yourself.
+Let me know if you need help with anything else!
+
+
+
+
+
+
+You said:
+also code for about us page
+ChatGPT said:
+ChatGPT
+Here’s a simple example of an About Us page. This page typically includes information about your company, mission, vision, and other relevant details.
+
+about.html
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products/Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Who We Are</h2>
+            <p>Welcome to My Website! We are a team of dedicated professionals committed to providing the best services and products in our industry. Our company was founded in [year] with a vision to deliver quality and value to our customers.</p>
+        </section>
+
+        <section>
+            <h2>Our Mission</h2>
+            <p>Our mission is to empower our clients by offering innovative and reliable solutions. We strive to build long-term relationships through customer satisfaction and excellence.</p>
+        </section>
+
+        <section>
+            <h2>Our Vision</h2>
+            <p>We envision a future where our company plays a leading role in the industry by continuously adapting to the changing needs of our clients and embracing technological advancements.</p>
+        </section>
+
+        <section>
+            <h2>Meet Our Team</h2>
+            <p>Our team consists of experienced professionals who are passionate about what they do. We believe in a collaborative environment where everyone contributes to our success.</p>
+        </section>
+
+        <section>
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>High-quality products/services tailored to your needs</li>
+                <li>Dedicated customer support</li>
+                <li>Competitive pricing and transparent business practices</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+Explanation:
+Who We Are: A brief introduction to your company or organization.
+Our Mission: Explain the core mission of your business and what you aim to achieve.
+Our Vision: Talk about your future aspirations and how you see the company growing or impacting the industry.
+Meet Our Team: An optional section to introduce the key members of your team (if applicable).
+Why Choose Us?: A section highlighting why your customers should choose you over competitors (unique selling points).
+CSS for Styling (Optional)
+You can add this to your styles.css file to style the About Us page.
+
+css
+Copy code
+section {
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+Customizing
+Update Content: Make sure to replace placeholders like [year] with real information about your business.
+Add Images: If you'd like to include team photos or company images, you can add image elements inside the relevant sections.
+Example:
+
+html
+Copy code
+<img src="images/team.jpg" alt="Our Team" style="width:100%; max-width:600px;">
+This creates a simple but professional-looking About Us page. Let me know if you need further customization!
+
+
+
+
+
+
+You said:
+for css design do i place all css code in a single file styles.css for contact about....
+ChatGPT said:
+ChatGPT
+Yes, it is common and recommended to place all of your CSS styles for the entire website in a single file, such as styles.css. This approach ensures that your design is consistent across all pages and makes it easier to maintain and update styles.
+
+Benefits of Using a Single styles.css File:
+Consistency: All pages will have the same styling, ensuring a uniform look and feel.
+Ease of Maintenance: You only need to update one file to change styles across multiple pages.
+Faster Loading: The browser will only need to download one CSS file, which will then be cached for all subsequent pages.
+Modularity: You can use classes and IDs in your CSS that can be applied to elements on different pages, reducing redundancy.
+Example of styles.css
+In your styles.css, you can write global styles that apply to all pages, and you can also add page-specific styles if needed.
+
+css
+Copy code
+/* Global Styles for All Pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header, footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+/* Specific Styles for the Contact Us Form */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific Styles for the About Us Page */
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+section ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+How to Link the CSS in HTML Pages
+In each HTML page (e.g., contact.html, about.html), you simply link to the same styles.css file in the <head> section like this:
+
+html
+Copy code
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+Structuring the CSS for Specific Pages
+If you have specific styles that apply only to certain pages (e.g., contact form styling for contact.html), you can add CSS comments to organize and separate styles within the same styles.css file:
+
+css
+Copy code
+/* Global Styles for All Pages */
+/* ... */
+
+/* Contact Us Page Specific Styles */
+/* ... */
+
+/* About Us Page Specific Styles */
+/* ... */
+This way, you can keep everything in a single file, but still maintain clarity about what styles apply to which sections of your website.
+
+Optional: Multiple CSS Files (Not Required)
+In some cases, developers split CSS into multiple files (e.g., one for global styles and one for page-specific styles). However, this is usually done for very large websites. For small to medium projects, a single styles.css file is typically more than sufficient.
+
+Let me know if you need further clarification!
+
+
+
+
+
+
+You said:
+this website is made for a officaial page of a public figure
+ChatGPT said:
+ChatGPT
+Memory updated
+Got it! Since the website is for an official page of a public figure, you'll want to make it professional, clean, and user-friendly. Here are some tips to tailor your website for a public figure:
+
+Key Sections for a Public Figure's Website
+Home Page (Landing Page):
+
+Introduction: A welcoming section with a brief introduction about the public figure.
+Profile Image: A high-quality photo of the person.
+Call to Action: Buttons leading to key sections (e.g., "Learn More," "Contact," etc.).
+About Page:
+
+Biography: A detailed bio section including the public figure's background, achievements, mission, and vision.
+Milestones: A timeline of major accomplishments or key moments in their career.
+Photos/Videos: Highlighting important moments from their life or career.
+Public Engagement/News Section:
+
+Include recent updates, events, or media appearances of the public figure.
+Press releases or official statements.
+Achievements/Portfolio:
+
+Showcase major awards, publications, interviews, or achievements.
+Contact Page:
+
+Allow people to reach out for collaborations, interviews, or other inquiries.
+If applicable, include links to social media profiles.
+Events or Schedule (if relevant):
+
+Information about upcoming public appearances, speeches, or events.
+Gallery:
+
+A section to showcase high-quality images and videos that represent their work or persona.
+Newsletter Signup:
+
+Add an option for fans or followers to subscribe to updates or newsletters.
+Let me know if you'd like to customize the structure or need help designing any specific sections for this official page!
+
+
+
+
+
+
+You said:
+write for homepage
+ChatGPT said:
+ChatGPT
+Here's a simple yet professional example for the Home Page of an official page dedicated to a public figure.
+
+index.html
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Public Figure Name] - Official Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Official Website of [Public Figure Name]</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/profile.jpg" alt="[Public Figure Name]" class="hero-image">
+            <div class="hero-content">
+                <h2>[Public Figure Name]</h2>
+                <p>Championing [Cause/Field] | [Title or Role] | Advocate for [Advocacy or Mission]</p>
+                <a href="about.html" class="cta-button">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="introduction">
+            <h2>About [Public Figure Name]</h2>
+            <p>[Public Figure Name] has dedicated their life to [key achievements, causes, or fields]. With over [X] years of experience in [field or profession], [Public Figure Name] has become a leading voice in [cause or domain].</p>
+            <a href="about.html" class="read-more">Read Full Biography</a>
+        </section>
+
+        <!-- Latest News or Updates Section -->
+        <section class="updates">
+            <h2>Latest Updates</h2>
+            <ul>
+                <li><a href="#">[Date]: [Recent News Headline or Event]</a></li>
+                <li><a href="#">[Date]: [Recent News Headline or Event]</a></li>
+                <li><a href="#">[Date]: [Recent News Headline or Event]</a></li>
+            </ul>
+            <a href="news.html" class="see-all">See All News</a>
+        </section>
+
+        <!-- Call to Action (optional) -->
+        <section class="cta">
+            <h2>Join the Journey</h2>
+            <p>Stay connected and be the first to know about upcoming events, news, and updates from [Public Figure Name].</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 [Public Figure Name]. All Rights Reserved.</p>
+        <ul class="social-links">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
+Explanation of Key Elements:
+Hero Section:
+
+This section introduces the public figure with a large profile image and key information like title, mission, or role. A call-to-action button encourages users to learn more by visiting the About page.
+html
+Copy code
+<img src="images/profile.jpg" alt="[Public Figure Name]" class="hero-image">
+Introduction Section:
+
+A short bio or introduction, highlighting the public figure’s work, achievements, and legacy. The "Read Full Biography" button directs users to the full bio on the About page.
+html
+Copy code
+<p>[Public Figure Name] has dedicated their life to [key achievements, causes, or fields].</p>
+Latest Updates Section:
+
+Highlights the latest news or updates. You can dynamically update this section as the public figure's news, events, or announcements change.
+html
+Copy code
+<ul>
+    <li><a href="#">[Date]: [Recent News Headline or Event]</a></li>
+</ul>
+Call to Action (CTA):
+
+Encourages visitors to connect with the public figure. This can include a newsletter sign-up or contact form.
+html
+Copy code
+<a href="contact.html" class="cta-button">Get in Touch</a>
+Footer:
+
+A footer with copyright information and social media links for followers to stay updated.
+html
+Copy code
+<ul class="social-links">
+    <li><a href="#">Twitter</a></li>
+</ul>
+CSS (Optional Styling)
+You can style the homepage elements in your styles.css file:
+
+css
+Copy code
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.hero-image {
+    border-radius: 50%;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Introduction */
+.introduction {
+    padding: 40px;
+    text-align: center;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+/* Updates Section */
+.updates ul {
+    list-style: none;
+    padding: 0;
+}
+
+.updates ul li {
+    margin: 10px 0;
+}
+
+.see-all {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+/* Footer */
+footer {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+footer .social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+}
+
